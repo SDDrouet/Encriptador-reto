@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap');
+
+:root {
+    --color-primario: #F5F7F8;
+    --color-secundario: #F4CE14;
+    --color-terciario: #495E57;
+    --color-cuaternario: #45474B;
+    --color-texto-A: #151618;
+    --color-texto-B: #F5F7F8;
+
+    --fuente-principal: "Akshar", sans-serif;;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente-principal);
+    color: var(--color-texto-A);
+}
+
+body {
+    background-color: var(--color-primario);
+}
