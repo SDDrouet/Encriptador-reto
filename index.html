@@ -1,33 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de Texto</title>
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
+
 <body>
     <header class="header">
-        <h1 class="header__titulo">Encriptador de texto</h1>
+        <div class="header__contenido">
+            <img src="./img/logo.svg" alt="logo">
+            <h1 class="header__titulo">Encriptador de texto</h1>
+        </div>
     </header>
 
-    <main class="principal">
-        <textarea name="texto_entrada" id="texto_entrada">Texto de entrada</textarea>
-        <button id="btn_encriptar">Encriptar</button>
-        <button id="btn_desencriptar">Desencriptar</button>
+    <main>
+        <div class="principal">
+            <section class="entrada">
+                <div>
+                    <div class="entrada__textarea">
+                        <textarea class="entrada__textarea__texto" name="texto_entrada" id="texto_entrada"
+                            placeholder="Ingrese el texto aquí..."></textarea>
+                        
+                    </div>
+                    <div class="entrada__info">
+                        <img class="entrada__info__img" src="./img/info.svg" alt="Info:">
+                        <p>Solo letras minúsculas y sin acentos</p>
+                    </div>
 
-        <textarea name="texto_salida" id="texto_salida">Texto de salida</textarea>
+                    <div class="entrada__botones">
+                        <button id="btn_encriptar" onclick="encriptarTexto()">Encriptar</button>
+                        <button id="btn_desencriptar" onclick="desencriptarTexto()">Desencriptar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="salida">
+                <div class="salida__campo">
+                    <div class="salida__campo__imagenTexto" id="salida__campo__imagenTexto">
+                        <img class="salida__campo__imagen" src="./img/buscar_texto.svg" alt="buscar">
+                        <p class="salida__campo__imagenTexto__strong">Ningún mensaje fue encontrado</p>
+                        <p class="salida__campo__imagenTexto__normal">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
+
+                    <div class="salida__campo__textArea" id="salida__campo__textArea">
+                        <div>
+                            <img class="btn_copy" id="btn_copy" src="./img/copy.svg" alt="">
+                        </div>
+                        <textarea class="texto_salida" name="texto_salida" id="texto_salida"></textarea>
+                    </div>
+
+
+                </div>
+
+            </section>
+        </div>
+
     </main>
 
-    <footer>
-        <p>Desarrollado por Stephen Drouet</p>
-        <p>Redes Sociales: </p>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/stephen-drouet-a136b4260/">Linkedin</a></li>
-            <li><a href="https://github.com/SDDrouet">GitHub</a></li>
-        </ul>
+    <footer class="piePagina">
+        <div class="piePagina__nombre">
+            <p>Desarrollado por <strong>Stephen Drouet</strong></p>
+        </div>
+
+        <div class="piePagina__contacto">
+            <p><strong>Redes Sociales:</strong> </p>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/stephen-drouet-a136b4260/">Linkedin</a></li>
+                <li><a href="https://github.com/SDDrouet">GitHub</a></li>
+            </ul>
+        </div>
     </footer>
 
     <script src="js/encriptador.js"></script>
+    <script src="js/utils.js"></script>
 </body>
+
 </html>
